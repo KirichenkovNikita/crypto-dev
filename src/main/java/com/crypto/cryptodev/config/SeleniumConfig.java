@@ -26,7 +26,7 @@ public class SeleniumConfig {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--remote-allow-origins=*");
         options.addExtensions (new File(metamaskPath));
-        WebDriver driver = new ChromeDriver(options);
+        WebDriver driver = new RandomClickBtnDriver(options);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(15));
         driver.manage().window().maximize();
